@@ -487,10 +487,16 @@
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
+
+  // Creality CR-8S (with modifies heat break, brass bushing with inner D 2mm up to heating block top surface)
+  #define DEFAULT_Kp 18.68
+  #define DEFAULT_Ki 1.53
+  #define DEFAULT_Kd 57.00
+
   // Creality Ender-3
-  #define DEFAULT_Kp 21.73
-  #define DEFAULT_Ki 1.54
-  #define DEFAULT_Kd 76.55
+  //#define DEFAULT_Kp 21.73
+  //#define DEFAULT_Ki 1.54
+  //#define DEFAULT_Kd 76.55
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -747,7 +753,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 92.6 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 } // E0 was 92.6, calibrated with PETG filament
 
 /**
  * Default Max Feed Rate (mm/s)
